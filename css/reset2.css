@@ -1,0 +1,58 @@
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-text-size-adjust: none;
+}
+
+img,
+fieldset {
+    border: 0
+}
+
+ul,
+ol,
+li,
+dl {
+    list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: 100%;
+    font-weight: normal;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+em,
+i,
+address {
+    font-style: normal;
+    font-weight: normal;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+textarea,
+input {
+    background: url(none);
+    border-radius: 1px;
+    -webkit-apprearance: none;
+}
+
+textarea {
+    resize: none;
+}
+
+label {
+    cursor: pointer;
+}

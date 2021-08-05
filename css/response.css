@@ -1,0 +1,27 @@
+/* @media screen and (max-width:480px) {
+    .login_form label {
+        display: none !important;
+        width: 0px;
+        overflow: hidden;
+    }
+    .login_form input{
+        width: 100% !important;
+        margin-left:0 !important;
+    }
+}
+*/
+@media screen and (max-width:800px) {
+    /* .logo_box {
+        width: 40%;
+    } */
+    .logo_box label {
+        /* width: 100px; */
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
+
+/* @media screen and (min-width:801px) {
+    .logo_box label{ }
+}  */

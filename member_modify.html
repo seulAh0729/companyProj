@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=0.5,maximum-scale=2">
+<title>사용자 수정</title>
+<link rel="stylesheet" href="./css/reset.css">
+<link rel="stylesheet" href="./css/normalize.css">
+<link rel="stylesheet" href="./css/style.css">
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css" />
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+<script language="javascript">
+	function btn_check(txt, url){
+		var answer;
+		answer = confirm(txt + '하시겠습니까?');
+		if(answer == true){
+			location = url;
+		}
+	}
+
+	$(document).ready(function(){
+		$(".date_sel").datepicker({
+			showOn: "both",
+			buttonText: '날짜선택'
+		});
+
+		$(".ui-datepicker-trigger").addClass("btn btn-primary");
+	});
+</script>
+</head>
+
+<body>
+	<header id="gb" class="flex-container flex-wrap flex-justify-between flex-align-stretch">
+		<div class="flex-item-align-center logo">
+			<a href=""><img src="./img/zen9ssLogo.png" alt="ZEN9SoftSystem"></a>
+		</div>
+
+		<nav id="mnb" class="flex-item-align-stretch">
+			<ul class="">
+				<li><a href="" class="btn btn-l">프로젝트 관리</a></li>
+				<li><a href="" class="btn btn-l">사용자 관리</a></li>
+			</ul>
+		</nav>
+
+		<div class="flex-item-align-end login">
+			젠나인 님 <a href="" class="btn btn-s btn-info">로그아웃</a>
+		</div>
+	</header>
+
+	<article class="main">
+		<h1>사용자 수정</h1>
+
+		<form action="" name="" class="">
+			<fieldset>
+				<legend>사용자 정보 수정</legend>
+
+				<table summary="사용자 수정" class="write">
+					<caption>사용자 수정</caption>
+
+					<colgroup>
+						<col class="no" >
+						<col class="sbj"> 
+						<col class="con">
+					</colgroup>
+
+					<tr>
+						<td class="no">1.</td>
+						<th class="sbj"><label for="wid"><label for="">id: </label></th>
+						<td class="con"><input type="text" name="wid" id="wid" autofocus />
+						<input type="button" class="btn btn-primary" value="중복확인"></td>
+					</tr>
+
+					<tr>
+						<td class="no">2.</td>
+						<th class="sbj"><label for="wpw">pw: </label></th>
+						<td class="con"><input type="password" name="password" id="wpw" /></td>
+					</tr>
+
+					<tr>
+						<td class="no">3.</td>
+						<th class="sbj"><label for="user">이름: </label></th>
+						<td class="con"><input type="text" name="user" id="user" /></td>
+					</tr>
+
+					<tr>
+						<td class="no">4.</td>
+						<th class="sbj"><label for="grade">직급: </label></th>
+						<td class="con"><input type="text" name="grade" id="grade" /></td>
+					</tr>
+
+					<tr>
+						<td class="no">5.</td>
+						<th class="sbj"><label for="team">부서: </label></th>
+						<td class="con"><input type="text" name="team" id="team" /></td>
+					</tr>
+
+					<tr>
+						<td class="no">6.</td>
+						<th class="sbj"><label for="birth">생년월일: </label></th>
+						<td class="con"><input type="text" name="birth" id="birth" />
+					</tr>
+
+					<tr>
+						<td class="no">7.</td>
+						<th class="sbj"><label for="tel">전화번호: </label></th>
+						<td class="con"><input type="tel" name="tel" id="tel" /></td>
+					</tr>
+
+					<tr>
+						<td class="no">8.</td>
+						<th class="sbj"><label for="email">email: </label></th>
+						<td class="con"><input type="email" name="email" id="email" /></td>
+					</tr>
+
+					<tr>
+						<td class="no">9.</td>
+						<th class="sbj"><label for="addr">주소: </label></th>
+						<td class="con"><input type="text" name="addr" id="addr" /></td>
+					</tr>
+
+					<tr>
+						<td class="no">10.</td>
+						<th class="sbj"><label for="wdate">등록일: </label></th>
+						<td class="con"><input type="text" name="wdate" id="wdate" class='date_sel' readonly />
+					</tr>
+				</table>
+
+				<div class="btn-group">
+					<input type="button" value="목록" class="btn btn-l btn-primary" style="float:left;" />
+					<input type="submit" value="수정" class="btn btn-l btn-primary" style="float:right;" onclick="btn_check('수정', './')" />
+					<input type="reset" value="취소" class="btn btn-l btn-primary" style="float:right;" onclick="btn_check('취소', './')" />
+				</div>
+			</fieldset>
+		</form>
+
+	</article>
+</body>
+</html>

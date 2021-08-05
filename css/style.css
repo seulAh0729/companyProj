@@ -1,0 +1,44 @@
+header#gb{background:#e5f2ff;}
+header#gb .logo{flex-grow:1; padding:1em;}
+header#gb .logo img{height:75px;}
+header#gb nav#mnb{flex-grow:4;}
+header#gb .login{flex-grow:2; padding:1em; text-align:right;}
+
+nav#mnb ul, nav#mnb li{height:100%; line-height:100%;}
+nav#mnb ul{clear:both; overflow:hidden; margin:0; padding:0;}
+nav#mnb li{display:table; float:left; border-right:1px solid #FFF;}
+nav#mnb li:after{display:block; height:100%; border-right:1px solid #FFF;}
+nav#mnb li a{display:table-cell; vertical-align:bottom; font-weight:bold;}
+nav#mnb li:after{clear:both;}
+
+article.main{width:90%; max-width:1200px; margin:0 auto; padding:0 0 2em;}
+article > h1{margin:2em 0;}
+
+table.view th, table.view td, 
+table.write th, table.write td
+{background:#e5f2ff;}
+
+table.view{}
+table.view th, table.view td{padding:.8em;}
+table.view th{}
+table.view td{}
+
+table.write{}
+table.write th, table.write td{padding:.5em .8em;}
+table.write th{}
+table.write td{}
+table.write input{margin:0; padding:.25em; border:none;}
+
+table .no{width:2em;}
+table .sbj{width:20%; text-align:left;}
+table .con{}
+
+@media (max-width: 1024px){
+}
+
+@media (max-width: 768px){
+}
+
+@media (max-width: 640px){
+}
+

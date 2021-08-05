@@ -1,0 +1,11 @@
+.CENTER {
+    text-align: center !important;
+}
+
+.RIGHT {
+    text-align: right !important;
+}
+
+.active {
+    font-weight: bold !important;
+}

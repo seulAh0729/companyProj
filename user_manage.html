@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset2.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/style2.css">
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <script src="./js/user.js" defer></script>
+    <title>프로젝트 관리</title>
+</head>
+
+<body>
+    <div id="wrap">
+        <!-- <header class="top_header">
+            <h1 class="logo"><img src="./imgs/zen9ssLogo.png"></h1>
+            <ul class="global_menu">
+                <li class="first"><a href="main.html">프로젝트관리</a></li>
+                <li class="second"><a href="#" class="active">사용자관리</a></li>
+            </ul>
+            <ol class="local_gnb">
+                <li class="login_session">
+                    <a href="#"> <span class="name">000</span></a> 님
+                </li>
+                <button class="logInOut">로그아웃</button>
+            </ol>
+        </header> -->
+        <header id="gb" class="flex-container flex-wrap flex-justify-between flex-align-stretch">
+            <div class="flex-item-align-center logo">
+                <a href=""><img src="./img/zen9ssLogo.png" alt="ZEN9SoftSystem"></a>
+            </div>
+
+            <nav id="mnb" class="flex-item-align-stretch">
+                <ul class="">
+                    <li><a href="" class="btn btn-l">프로젝트 관리</a></li>
+                    <li><a href="" class="btn btn-l">사용자 관리</a></li>
+                </ul>
+            </nav>
+
+            <div class="flex-item-align-end login">
+                젠나인 님 <a href="" class="btn btn-s btn-info">로그아웃</a>
+            </div>
+        </header>
+        <section>
+            <h2 class="subject_title"> 프로젝트 관리</h2>
+            <nav class="table_top">
+                <b>표시 목록수 : &nbsp;</b>
+                <div class="radio">
+                    <input type="radio" name="count" id="aaa" checked>
+                    <label for="aaa">20개</label>
+                    <input type="radio" name="count" id="bbb">
+                    <label for="bbb">50개</label>
+                    <input type="radio" name="count" id="ccc">
+                    <label for="ccc">100개</label>
+                </div>
+                <button class="excel_dn">
+                        엑셀다운로드</button>
+            </nav>
+            <table class="table">
+                <tr class="RIGHT">
+                    <td>&nbsp; </td>
+                    <td> </td>
+                    <td> </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr class="CENTER">
+                    <th>No</th>
+                    <th>ID</th>
+                    <th>이름</th>
+                    <th>직급</th>
+                    <th>부서</th>
+                    <th>생년월일</th>
+                    <th>전화번호</th>
+                    <th>Email</th>
+                    <th>주소</th>
+                    <th>등록자</th>
+                    <th>등록일</th>
+                </tr>
+
+            </table>
+
+
+            <ul class="pagenation">
+                <li class="first"><a href="#"> &lt;&lt; </a></li>
+                <li class="prev"><a href="#">  &lt; </a></li>
+
+                <li class="page"><a href="#" class="active">1</a></li>
+                <li class="page"><a href="#">2</a></li>
+                <li class="page"><a href="#">3</a></li>
+                <li class="page"><a href="#">4</a></li>
+                <li class="page"><a href="#">5</a></li>
+                <li class="page"><a href="#">6</a></li>
+                <li class="page"><a href="#">7</a></li>
+                <li class="page"><a href="#">8</a></li>
+
+                <li class="next"><a href="#"> &gt; </a></li>
+                <li class="last"><a href="#">  &gt;&gt; </a></li>
+            </ul>
+        </section>
+
+
+    </div>
+
+    <script>
+        function fnExcelReport(id, title) {
+            var tab_text = '<html xmlns:x="urn:schemas-microsoft-com:office:excel">';
+            tab_text = tab_text + '<head><meta http-equiv="content-type" content="application/vnd.ms-excel; charset=UTF-8">';
+            tab_text = tab_text + '<xml><x:ExcelWorkbook><x:ExcelWorksheets><x:ExcelWorksheet>'
+            tab_text = tab_text + '<x:Name>Test Sheet</x:Name>';
+            tab_text = tab_text + '<x:WorksheetOptions><x:Panes></x:Panes></x:WorksheetOptions></x:ExcelWorksheet>';
+            tab_text = tab_text + '</x:ExcelWorksheets></x:ExcelWorkbook></xml></head><body>';
+            tab_text = tab_text + "<table border='1px'>";
+            var exportTable = $('#' + id).clone();
+            tab_text = tab_text + exportTable.html();
+
+            var blob2 = new Blob([tab_text], {
+                type: "application/csv;charset=utf-8;"
+            });
+            var fileName = title + '.xls';
+            var filename = fileName;
+            var elem = window.document.createElement('a');
+            elem.href = window.URL.createObjectURL(blob2);
+            elem.download = filename;
+            document.body.appendChild(elem);
+            elem.click();
+            document.body.removeChild(elem);
+        }
+    </script>
+</body>
+
+</html>
