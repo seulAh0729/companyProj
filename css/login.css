@@ -1,161 +1,96 @@
 * {
-    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
 }
-
-html,
-body {
-    width: 700px;
-    width: 100vw;
+.wrap {
     height: 100%;
-    margin: auto;
-}
-
-#wrap {
-    width: 665px;
-    width: 95vw;
-    height: 90%;
-    border: 1px solid black;    
-    position: relative;
-    left: 50%;
-    top: 50%;
-    /* transform: translate(-332.5px, -50%); */
-    transform: translate(-47.5vw, -50%);
-
-}
-
-.main_titile {
-    margin: 15px 25px 0;
-    margin: 2.143vw 3.571vw 0;
-    font-size: 2.286vw;
-}
-
-:root {
-    --widthA: 200px;   
-    --widthA: 28.571vw;
-    /* --height: 30px; */
-    --height: 3.2vw  ;
-    --fontSize:1.571vw;
-    --widthL:65px;
-    --widthL: 9.286vw ;
-
-}
-
-div.logo_box {
-    width: var(--widthA);
-    margin: auto;
+    width: 100%;
+    background-image: url(img/background.jpg);
+    background-position: center;
+    background-size: cover;
     position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate( -50%, -50%);
 }
-
-div.logo {
-    width: var(--widthA);
+.form-wrap {
+    width: 380px;
+    height: 480px;
+    position: relative;
+    margin: 6% auto;
+    background: #fff;
+    padding: 5px;
+    overflow: hidden;
 }
+.button-wrap {
+    width: 230px;
+    margin: 35px auto;
+    position: relative;
+    box-shadow: 0 0 600px 9px #fcae8f;
+    border-radius: 30px;
+}
+.togglebtn {
+    padding: 10px 30px;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    outline: none;
+    position: relative;
+}
+#btn {
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 110px;
+    height: 100%;
+    background: linear-gradient(to right, #ff105f, #ffad06);
+    border-radius: 30px;
+    transition: .5s;
+}
+.social-icons {
+    margin: 30px auto;
+    text-align: center;
+}
+.social-icons img {
+    width: 200px ;
 
-div.logo img {
-    width: var(--widthA);
+}
+.input-group {
+    top: 180px;
+    position: absolute;
+    width: 280px;
+    transition: .5s;
+}
+.input-field {
+    width: 100%;
+    padding: 10px 0;
+    margin: 5px 0;
+    border: none;
+    border-bottom: 1px solid #999;
+    outline: none;
+    background: transparent;
+}
+.submit {
+    width: 85%;
+    padding: 10px 30px;
+    cursor: pointer;
     display: block;
     margin: auto;
+    background: #B2CCFF;
+    border: 0;
+    outline: none;
+    border-radius: 30px;
 }
-
-.clear {
-    clear: both;
+.checkbox {
+    margin: 30px 10px 30px 0;
 }
-
-.login_form {
-    padding-right: 20px;
-    padding-right:2.857vw;
-
-    padding-left: 10px;
-    padding-left: 1.429vw;
-
+span {
+    color: #777;
+    font-size: 12px;
+    bottom: 68px;
+    position: absolute;
 }
-
-.login_form>p {
-    display: flex;
-    width: auto;
-    margin: 5px 0;
-    margin: 0.714vw 0; 
-
+#login {
+    left: 50px;
 }
-
-.login_form>.id_row>* {
-    display: block;
-    padding: 5px;
-    padding:0.714vw;
-}
-
-.login_form>.pw_row>* {
-    display: block;
-    padding: 5px;
-    padding:0.714vw;
-}
-
-.login_form>.id_row>label {
-    width: var(--widthL);
-    text-align: justify;
-    display: block;
-    letter-spacing: 0.5px;
-    letter-spacing:0.071vw;
-    font-size: 13px;
-    font-size:var(--fontSize);
-
-}
-
-.login_form>.id_row>input {
-    width: 65%;
-    outline: 0;
-    border: 0.5px solid black;
-    border:0.071vw solid black;
-    height: var(--height);
-}
-
-.login_form>.pw_row>label {
-    width: var(--widthL);
-    text-align: justify;
-    /* letter-spacing: 0px; */
-    font-size: 13px;
-    font-size:var(--fontSize);
-
-}
-
-.login_form>.pw_row>input {
-    width: 65%;
-    outline: 0;
-    border: 0.5px solid black;
-    border:0.071vw solid black;
-    height: var(--height);
-
-}
-
-.send_btn {
-    all: unset;
-    display: block;
-    background: linear-gradient(to bottom, #7892c2 5%, #476e9e 100%);
-    background-color: #7892c2;
-    cursor: pointer;
-    color: #ffffff;
-    
-    font-size:1.8vw;
-    padding: 5px;
-    width: 70px;
-    width:10vw;
-    height: 2.8vw;
-    text-align:center;
-   
-    margin-left:8.9vw;
-    margin-top: 5px;
-    margin-top:0.714vw;
-}
-
-.send_btn:hover {
-    background: linear-gradient(to bottom, #7892c2 5%, #476e9e 100%);
-    background-color: #7892c2;
-    cursor: pointer;
-}
-
-.send_btn:active {
-    position: relative;
-    top: 1px;
+#register {
+    left: 450px;
 }
